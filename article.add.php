@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'UTF-8'>
+	<title>后台管理系统</title>
+	<link rel="stylesheet" type="text/css" href="article.add.css">
+	<style type="text/css">
+	body{
+		margin: 0px;
+	}
+	</style>
+</head>
+<body>
+<p height="89" align="center" width="100%"><strong>后台管理系统</strong></p>
+<table width="100%" height="520" border="0" cellpadding="0" cellspacing="1" bgcolor="#000">
+	<tr>
+		<td width="156" align="left" valign="top" bgcolor="#fff"><p align="center"><a href="article.add.php">发布文章</a></p><p align="center"><a href="article.manage.php">管理文章</a></p></td>
+		<td width="837" valign="top" bgcolor="#fff">
+			<form method="post" name="article_add" action="article.add.handle.php">
+			<table>
+				<tr><td colspan="2" align="center">发布文章</td></tr>
+				<tr><td>标题</td><td><input type="text" name="title"></input></td></tr>
+				<tr><td>作者</td><td><input type="text" name="author"></input></td></tr>
+				<tr><td>简介</td><td><textarea name="description" cols="60"
+				rows="5"></textarea></td></tr>
+				<tr><td>内容</td><td><textarea name="content" cols="60"
+				rows="15"></textarea></td></tr>
+				<tr><td colspan="2" align="right"><input type="submit" name="submit"></input></td></tr>
+			</table>
+			</form>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
