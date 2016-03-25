@@ -3,7 +3,6 @@
 <head>
 	<meta charset = 'UTF-8'>
 	<title>后台管理系统</title>
-	<link rel="stylesheet" type="text/css" href="article.add.css">
 	<style type="text/css">
 	body{
 		margin: 0px;
@@ -16,7 +15,7 @@
 	<tr>
 		<td width="156" align="left" valign="top" bgcolor="#fff"><p align="center"><a href="article.add.php">发布文章</a></p><p align="center"><a href="article.manage.php">管理文章</a></p></td>
 		<td width="837" valign="top" bgcolor="#fff">
-			<form method="post" name="article_add" action="article.add.handle.php">
+			<form method="post" name="article_add" action="PHP/article.add.handle.php">
 			<table>
 				<tr><td colspan="2" align="center">发布文章</td></tr>
 				<tr><td>标题</td><td><input type="text" name="title"></input></td></tr>

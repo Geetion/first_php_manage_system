@@ -1,13 +1,13 @@
 <?php
 
-	require_once(config.php);
+	require_once('config.php');
 
-	if (!($con = mysql_connect(HOST,USERNAME,PASSWORD)){
+	if (!($con = mysql_connect(HOST,USERNAME,PASSWORD))){
 		echo mysql_error();
 	}
 
 
-	if (!mysql_select_db(database_name)){
+	if (!mysql_select_db('test')){
 		echo mysql_error();
 	}
 
