@@ -1,6 +1,9 @@
 <?php
 	require_once('PHP/connect.php');
-	$query = ('select * from article order by id');
+
+	$page = $_GET['page'];
+
+	$query = "select * from article order by id limit ".(($page-1)*10).",10";
 	if ($result = mysql_query($query)) {
 		while ($row = mysql_fetch_assoc($result)) {
 			$data[] = $row; 
@@ -8,6 +11,16 @@
 	}else{
 		$data = array();
 	}
+
+	$item_numsql = 'select * from article';
+
+	$item_numquery = mysql_query($item_numsql);
+
+	$item_num = mysql_num_rows($item_numquery);
+
+	$totol_page = ceil($item_num/10);
+
+	mysql_free_result($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,9 +47,28 @@
 						}
 					}
 				?>
-
 			</table>
 		</td>
+	</tr>
+	<tr>
+</table>
+<table width="100%">
+		<?php
+			$pages = 10>$totol_page?$totol_page:10;
+			echo "<td><a href='".$_SERVER['PHP_SELF']."?page=1'>首页</a></td>";
+			echo "<td><a href='".$_SERVER['PHP_SELF']."?page=".($page-1)."'>上一页</a></td>";
+			for ($i=1; $i <=$pages; $i++) { 
+					if ($page == $i) {
+						echo "<td bgcolor='#fff'><a>".$i."</a></td>";
+					}else{
+				 echo "<td bgcolor='#fff'><a href='#''>".$i."</a></td>";
+				}
+		
+			}
+			echo "<td><a href='".$_SERVER['PHP_SELF']."?page=".($page+1)."'>下一页</a></td>";
+			echo "<td>共".$totol_page."页</td>";
+			echo "<td><a href='".$_SERVER['PHP_SELF']."?page=".$totol_page."'>尾页</a></td>";
+		?>
 	</tr>
 </table>
 

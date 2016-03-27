@@ -13,7 +13,7 @@
 <p height="89" align="center" width="100%"><strong>后台管理系统</strong></p>
 <table width="100%" height="520" border="0" cellpadding="0" cellspacing="1" bgcolor="#000">
 	<tr>
-		<td width="156" align="left" valign="top" bgcolor="#fff"><p align="center"><a href="article.add.php">发布文章</a></p><p align="center"><a href="article.manage.php">管理文章</a></p></td>
+		<td width="156" align="left" valign="top" bgcolor="#fff"><p align="center"><a href="article.add.php">发布文章</a></p><p align="center"><a href="article.manage.php?page=1">管理文章</a></p></td>
 		<td width="837" valign="top" bgcolor="#fff" align="center">
 			<form method="post" name="article_add" action="PHP/article.add.handle.php">
 			<table>

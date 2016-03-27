@@ -24,9 +24,9 @@
 		$insert_sql= "insert into article(title,author,description,content,dateline) values('$title','$author','$description','$content','$dateline')";
 
 		if(mysql_query($insert_sql)){
-			echo "<script>alert('发布文章成功');window.location.href='../article.manage.php';</script>";
+			echo "<script>alert('发布文章成功');window.location.href='../article.manage.php?page=1';</script>";
 		}else{
-			echo "<script>alert('发布文章失败');window.location.href='../article.add.php';</script>";
+			echo "<script>alert('发布文章失败');window.location.href='../article.add.php?page=1';</script>";
 		}
 	}
 	?>
